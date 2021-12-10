@@ -28,6 +28,7 @@ COPY pcbnew_do.py .
 # Add jitter-specific libraries
 # NOTE: config files in ~/.config point here
 RUN git clone https://github.com/JitterCompany/KicadComponents.git
+RUN chown --recursive build:build /jitter/KicadComponents
 
 RUN mkdir -p /usr/share/kicad/modules/
 WORKDIR /usr/share/kicad/modules/

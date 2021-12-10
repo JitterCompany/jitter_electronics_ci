@@ -21,10 +21,12 @@ shift
 shift
 
 
+echo "Updating component library.."
+echo $(cd /jitter/KicadComponents && git pull)
+
 # Copy project dir to tmp folder (they will be edited by preprocess script)
 TMP_DIR="/tmp/${PROJECT_NAME}"
-cp --recursive "${PROJECT_NAME}" "${TMP_DIR}"
-
+cp --recursive --dereference "${PROJECT_NAME}" "${TMP_DIR}"
 
 CONFIG_FILE="${TMP_DIR}/${PROJECT_NAME}.kibot.yaml"
 BOARD_FILE="${TMP_DIR}/${PROJECT_NAME}.kicad_pcb"

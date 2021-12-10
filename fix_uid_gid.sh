@@ -15,3 +15,6 @@ groupmod -g $2 build
 chown -R build /home/build
 chgrp -R build /home/build
 
+chown -R build /jitter/KicadComponents
+chgrp -R build /jitter/KicadComponents
+
